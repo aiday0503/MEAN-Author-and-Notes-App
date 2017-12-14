@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form #form="ngForm" (submit)="createNote()">
+            <div class="form-group">
+                <label for="">Author: </label>
+                <input type="text" name="author" class="form-control" required [(ngModel)]="note.author"><br>
+            </div>
+            <div class="form-group">
+                <label for="">Note: </label> <input type="text" name="body" class="form-control" required [(ngModel)]="note.body"><br>
+            </div>
+            <button type='submit' class="badge badge-success">Create Note!</button>
+        </form>
+    </div>
+</body>
+
+
+</html>
